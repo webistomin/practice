@@ -618,6 +618,7 @@ figure {
   background-image: url("../img/toys-bg.png");
   background-position: 0 26px;
   background-repeat: repeat-x;
+  background-blend-mode: darken;
 }
 .blog-in__list {
   counter-reset: myCounter;
