@@ -1,0 +1,190 @@
+.main-nav {
+  position: fixed;
+  top: 60px;
+  right: 100%;
+  bottom: 0;
+  z-index: 1;
+
+  width: 256px;
+  overflow-y: scroll;
+
+  box-shadow: 0 0 4px #000000;
+  transform: translateX(18px);
+
+  transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1);
+
+  &--opened {
+    transform: translateX(256px);
+  }
+
+  &__title {
+    display: block;
+    margin: 0 auto;
+    padding-top: 19px;
+
+    font-weight: 400;
+    font-size: @font-size--huge;
+    font-family: BebasNeueCyrillic, sans-serif;
+    text-align: center;
+    color: @color-biege;
+    letter-spacing: 0.03em;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 200vh;
+
+    background-color: @color-grey;
+
+    transition: all 0.5s ease;
+  }
+
+  &__logo {
+    padding-top: 26px;
+    padding-bottom: 32px;
+
+    text-align: center;
+  }
+
+  &__banner {
+    position: relative;
+    z-index: 1;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 154px;
+
+    background-image: url("../img/aside-banner.jpg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(0,0,0,0.79);
+    }
+  }
+
+  &__date {
+    font-size: @font-size--smaller;
+    text-align: left;
+    color: @color-text--active;
+  }
+
+  &__name {
+    text-align: left;
+  }
+
+  &__item {
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 40px;
+
+    font-size: @font-size--small;
+    font-family: BebasNeue, sans-serif;
+    text-align: left;
+    color: @color-biege;
+    text-transform: uppercase;
+    text-shadow: rgba(0,0,0,0.01) 0 0 1px;
+
+    border-bottom: 1px dotted rgba(173,146,96,0.5);
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 23px;
+
+      width: 11px;
+      height: 19px;
+
+      background-image: url("../img/spritesheet.png");
+      background-position: -55px -30px;
+      transform: translateY(-50%);
+    }
+
+    &--banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      padding-left: 40px;
+    }
+
+    &:hover {
+      color: @color-text--active;
+
+      background-color: @color-link--active;
+    }
+
+    &:hover::after {
+      background-image: url("../img/spritesheet.png");
+      background-position: -122px -51px;
+      transform: rotate(180deg) translateY(50%);
+    }
+
+
+    &--banner:hover {
+      color: inherit;
+
+      background-color: transparent;
+    }
+  }
+}
+
+@media  @desktop-widths {
+  .main-nav {
+    left: 0;
+
+    overflow-y: scroll;
+
+    transform: translateX(0);
+
+    transition: none;
+  }
+
+
+  //Временный скролл бар, заменить на JavaScript
+  //::-webkit-scrollbar {
+  //  width: 6px;
+  //  height: 0;
+  //}
+  //
+  //::-webkit-scrollbar-track {
+  //  background: rgba(0,0,0,0.05);
+  //  border-radius: 3px;
+  //}
+  //
+  //::-webkit-scrollbar-thumb {
+  //  background: rgba(0,0,0,0.3);*
+  //  border-radius: 3px;
+  //}
+  //
+  //::-webkit-scrollbar-thumb:window-inactive {
+  //  background: rgba(0,0,0,0.1);
+  //}
+}

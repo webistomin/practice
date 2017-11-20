@@ -1,0 +1,27 @@
+.row {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  min-height: 55px;
+
+  background-image: url(../img/pattern-sprite.png),linear-gradient(#baa46f,#ad9260);
+  background-position: 0 100%;
+  //background-size: cover;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+  &__container {
+    .container();
+  }
+
+  &--closed {
+    transform: translateX(0px);
+
+    transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1);
+  }
+
+  &--opened {
+    transform: translateX(256px);
+
+    transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1);
+  }
+}

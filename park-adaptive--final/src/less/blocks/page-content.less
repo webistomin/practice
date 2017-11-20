@@ -1,0 +1,27 @@
+.page-content {
+  &--opened {
+    transform: translateX(256px);
+
+    transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1);
+  }
+
+  &--closed {
+    margin-left: 18px;
+
+    transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1), margin 0.4s cubic-bezier(0.8, 0, 0.2, 1);
+  }
+}
+
+@media @desktop-widths {
+  .page-content {
+    margin-left: 256px;
+
+    &--opened {
+      transition: none;
+    }
+
+    &--closed {
+      transition: none;
+    }
+  }
+}

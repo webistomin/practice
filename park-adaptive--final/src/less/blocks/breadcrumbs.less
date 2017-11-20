@@ -1,0 +1,28 @@
+.breadcrumbs {
+  &__link {
+    position: relative;
+
+    display: block;
+    padding-left: 20px;
+
+    font-weight: 400;
+    font-size: @font-size--small;
+    line-height: @line-height--small;
+    font-family: BebasNeueCyrillic, Roboto, sans-serif;
+    color: @color-breadcrumb;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 11px;
+      height: 19px;
+
+      background-image: url("../img/spritesheet.png");
+      background-position: -122px -51px;
+      transform: translateY(-50%);
+    }
+  }
+}

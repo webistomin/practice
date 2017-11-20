@@ -1,0 +1,177 @@
+.action {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 40px;
+  padding-bottom: 85px;
+
+  background-color: @color-darkgreen;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/action-bg.jpg");
+    background-position: -300px top;
+    background-size: cover;
+  }
+
+
+  &__container {
+    .container();
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-top: 50px;
+
+    font-weight: 400;
+    font-size: @font-size--huge;
+    font-family: "NotoSerif", "Roboto", sans-serif;
+    text-align: center;
+    color: @color-heading;
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-weight: 400;
+    font-size: @font-size--big;
+    font-family: "NotoSerif", "Roboto", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__break {
+    display: none;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-style: italic;
+
+    &--margin {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__btn {
+    max-width: 143px;
+    height: 42px;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-size: @font-size--smaller;
+    line-height: normal;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media @tablet-widths {
+  .action {
+    padding-top: 48px;
+
+    &::before {
+      background-position: 0 top;
+      background-size: cover;
+    }
+
+    &__img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__heading {
+      font-size: @font-size--large;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .action {
+    padding-bottom: 50px;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__subtitle {
+      padding-top: 0;
+    }
+
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 545px;
+      width: 46%;
+    }
+
+    &__image {
+      width: 46%;
+    }
+
+
+    &__heading {
+      margin-bottom: 30px;
+      text-align: left;
+      font-size: @font-size--huge-l;
+    }
+
+    &__btn {
+      margin: 0;
+    }
+
+    &__break {
+      display: block;
+    }
+
+    &__text {
+      font-size: @font-size--tiny-l;
+      text-align: left;
+    }
+  }
+}
+
+
+@media @laptop-widths {
+  .action {
+    &__subtitle {
+      padding-top: 50px;
+    }
+
+    &__img {
+      margin: 0;
+    }
+
+    &__image {
+      width: auto;
+    }
+
+    &__desc {
+      width: auto;
+    }
+  }
+}

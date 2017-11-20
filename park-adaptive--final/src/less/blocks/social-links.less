@@ -1,0 +1,65 @@
+.social-links {
+  width: 178px;
+  margin: 0 auto;
+  padding-top: 11px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: block;
+    width: 26px;
+    height: 25px;
+
+    background-image: url("../img/social-links.png");
+
+    &--google {
+      background-position: 0 0;
+    }
+
+    &--twitter {
+      background-position: 147px 0;
+    }
+
+    &--vk {
+      background-position: 117px 0;
+    }
+
+    &--fb {
+      background-position: 87px 0;
+    }
+
+    &--rss {
+      background-position: 56px 0;
+    }
+
+    &--ok {
+      background-position: 26px 0;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .social-links {
+    margin-right: 0;
+    margin-left: auto;
+
+    &__list {
+      width: 100%;
+      //padding-left: 20px;
+    }
+  }
+}
+
+
+@media @hires-desktop-width {
+  .social-links {
+    &__list {
+      width: 100%;
+      padding-left: 132px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.blog {
+  &__container {
+    .container();
+  }
+
+  &__heading {
+    margin-bottom: 52px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 360px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: @font-family--text;
+    line-height: @line-height--small;
+    font-size: @font-size--medium;
+    color: @color-title;
+    font-weight: 700;
+  }
+
+  &__date {
+    position: relative;
+    padding-left: 26px;
+    font-family: @font-family--text;
+    font-size: @font-size--tiny;
+    line-height: @line-height--medium;
+    color: @color-date;
+    font-weight: 400;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/icon-calendar.png");
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-family: @font-family--text;
+    font-size: @font-size--smaller;
+    line-height: @line-height--small;
+    color: @color-text;
+    font-weight: 400;
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 126px;
+    height: 52px;
+    font-size: @font-size--smaller;
+    line-height: @line-height--small;
+    font-family: @font-family--text;
+    background-color: @color-btn;
+    color: @color-btn-text;
+    font-weight: 700;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+  }
+
+
+}
+
+
+@media @desktop-widths {
+  .blog {
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__image {
+      width: 362px;
+      margin: 0;
+    }
+
+    &__desc {
+      max-width: 750px;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .blog {
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__image {
+      width: 47%;
+    }
+
+    &__desc {
+      width: 47%;
+      max-width: 500px;
+    }
+  }
+}
+
+
+@media @desktop-widths {
+  .blog {
+    &__image {
+      width: auto;
+    }
+
+    &__desc {
+      width: auto;
+    }
+  }
+}

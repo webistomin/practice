@@ -1,0 +1,33 @@
+.container {
+  width: 87.5%;
+  margin: 0 auto;
+
+
+  @media @tablet-widths {
+    width: 86.98%;
+  }
+
+  @media @desktop-widths {
+    width: 97%;
+    //width: 96%;
+  }
+
+  @media @laptop-widths {
+    width: 95%;
+  }
+
+  @media @hires-desktop-width {
+    width: 1161px;
+  }
+}
+
+.visually-hidden () {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

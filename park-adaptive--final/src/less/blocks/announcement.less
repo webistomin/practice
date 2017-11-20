@@ -1,0 +1,224 @@
+.announcement {
+  &__container {
+    .container();
+  }
+
+  &__breadcrumbs {
+    box-sizing: border-box;
+    min-height: 100px;
+    padding-top: 40px;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+    padding-right: 28px;
+    padding-left: 15px;
+
+    font-size: @font-size--small;
+    line-height: @line-height--small;
+    font-family: BebasNeueCyrillic, Roboto, sans-serif;
+    color: #b19765;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 9px;
+      height: 15px;
+
+      background-image: url("../img/spritesheet.png");
+      background-position: -55px -5px;
+      transform: translateY(-50%);
+    }
+
+    &--black {
+      padding-right: 0;
+      padding-left: 28px;
+
+      color: @color-grey;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 2px;
+        height: 25px;
+
+        background-color: @color-grey;
+        background-image: none;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__inner {
+    .container();
+  }
+
+  &__heading {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: @font-size--medium;
+    font-family: BebasNeueCyrillic, sans-serif;
+    text-align: center;
+    color: @color-grey;
+    letter-spacing: 0.03em;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 5px;
+
+    font-weight: 400;
+    font-size: @font-size--small;
+    font-family: BebasNeueCyrillic, Roboto, sans-serif;
+    text-align: center;
+    color: @color-heading--second;
+    letter-spacing: 0.03em;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-weight: 400;
+    font-size: @font-size--medium;
+    font-family: BebasNeue, sans-serif;
+    text-align: center;
+    color: @color-grey;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    margin-bottom: 56px;
+
+    font-weight: 400;
+    font-size: @font-size--tiny-l;
+    font-family: "NotoSerif", "Roboto", sans-serif;
+    text-align: center;
+    color: @color-grey;
+    font-style: italic;
+    letter-spacing: 0.03em;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 544px;
+    min-height: 278px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+
+    &--first {
+      background-image: url("../img/news-1.jpg");
+      background-position: left;
+    }
+
+    &--second {
+      background-image: url("../img/news-5.jpg");
+    }
+
+    &--third {
+      background-image: url("../img/news-2.jpg");
+    }
+  }
+
+  &__btn {
+    display: block;
+    box-sizing: border-box;
+    max-width: 112px;
+    height: 45px;
+    margin: 0 auto;
+
+    font-size: @font-size--medium-s;
+    line-height: @line-height--small;
+    font-family: BebasNeueCyrillic, Roboto, sans-serif;
+
+    background-image: linear-gradient( -94deg, rgb(173,146,96) 0%, rgb(114,96,64) 100%);
+    border-radius: 4px;
+    box-shadow: 0 2px 0 0 rgba(88, 63, 18, 0.004);
+  }
+
+  &__item {
+    padding-top: 50px;
+    padding-bottom: 56px;
+    &:nth-child(odd) {
+      background-color: @color-news;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .announcement {
+    &__title {
+      font-size: @font-size--huge;
+      text-align: left;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 49%;
+      max-width: 500px;
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__button {
+      display: flex;
+      margin-top: auto;
+    }
+
+    &__btn {
+      padding: 0 12px;
+    }
+
+    &__img {
+      width: 49%;
+      margin: 0;
+
+      &--first,
+      &--third {
+        order: 2;
+      }
+    }
+  }
+}
+
+@media @hires-desktop-width {
+  .announcement {
+    &__desc {
+      max-width: 545px;
+    }
+  }
+}

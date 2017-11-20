@@ -1,0 +1,247 @@
+.afisha {
+  &__container {
+    .container();
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .container();
+  }
+
+  &__vignettes {
+    //width: 100%;
+    display: table;
+    margin: 0 auto;
+  }
+
+  &__vignette {
+    position: relative;
+
+    &--left,
+    &--right {
+      display: table-cell;
+      padding-bottom: 5px;
+    }
+
+    &--left {
+      text-align: left;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    &--inner {
+      margin: 0 8px;
+    }
+  }
+
+  &__icon {
+    &--left {
+      display: inline-block;
+      width: 13px;
+      height: 14px;
+
+      background-image: url("../img/spritesheet.png");
+      background-position: -5px -57px;
+    }
+
+    &--right {
+      display: inline-block;
+      width: 13px;
+      height: 14px;
+
+      background-image: url("../img/spritesheet.png");
+      background-position: -99px -57px;
+    }
+  }
+
+  &__heading {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: @font-size--medium;
+    font-family: BebasNeueCyrillic, sans-serif;
+    text-align: center;
+    color: @color-grey;
+    letter-spacing: 0.03em;
+  }
+
+  &__img {
+    box-sizing: border-box;
+    width: 135px;
+    height: 135px;
+    margin-bottom: 26px;
+
+    border: 3px solid @color-afisha--second;
+    border-radius: 50%;
+
+    &--first {
+      background-image: url("../img/afisha-1.jpg");
+      background-position: top;
+    }
+
+    &--second {
+      background-image: url("../img/afisha-2.jpg");
+    }
+
+    &--third {
+      background-image: url("../img/afisha-3.jpg");
+    }
+
+    &--fourth {
+      background-image: url("../img/afisha-4.jpg");
+      background-position: top;
+    }
+
+    &--fifth {
+      background-image: url("../img/afisha-5.jpg");
+    }
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: @font-size--big;
+    font-family: BebasNeue, sans-serif;
+    color: @color-heading--second;
+    letter-spacing: 0.03em;
+  }
+
+  &__item {
+    padding-top: 26px;
+    padding-bottom: 30px;
+
+    border-top: 1px solid @color-afisha;
+
+    &:last-child {
+      border-bottom: 1px solid @color-afisha;
+    }
+
+    &:hover {
+      background-color: @color-afisha--hover;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: @font-size--medium;
+    font-family: BebasNeueCyrillic, sans-serif;
+    text-align: center;
+    color: @color-grey;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: @font-size--smaller;
+    font-family: "NotoSerif", "Roboto", sans-serif;
+    text-align: center;
+    color: @color-afisha-text;
+    font-style: italic;
+    letter-spacing: 0.03em;
+  }
+
+  &__btn {
+    width: 157px;
+    height: 46px;
+
+    font-size: @font-size--medium-s;
+    letter-spacing: 0.03em;
+
+    background-image: linear-gradient( -94deg, rgb(173,146,96) 0%, rgb(114,96,64) 100%);
+    border-radius: 4px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.48);
+  }
+}
+
+@media @tablet-widths {
+  .afisha {
+    &__heading {
+      font-size: @font-size--huge;
+    }
+
+    &__icon {
+      &--right,
+      &--left {
+        padding-bottom: 5px;
+
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .afisha {
+    &__title {
+      max-width: 470px;
+      margin: 10px 0;
+
+      font-size: @font-size--huge;
+      text-align: left;
+    }
+
+    &__vignettes {
+      margin: 0;
+    }
+
+    &__inner {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: end;
+    }
+
+    &__img {
+      margin-right: 62px;
+    }
+
+    &__desc {
+      align-items: flex-start;
+      max-width: 350px;
+    }
+
+    &__button {
+      align-self: flex-start;
+      margin-top: 40px;
+      margin-left: auto;
+    }
+
+    &__text {
+      margin-bottom: 0
+    }
+
+    &__item {
+      box-sizing: border-box;
+      height: auto;
+    }
+  }
+}
+
+@media @laptop-widths {
+  .afisha {
+    &__desc {
+      max-width: none;
+    }
+
+    &__item {
+      padding-bottom: 3px;
+    }
+  }
+}
