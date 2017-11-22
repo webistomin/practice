@@ -223,6 +223,7 @@ body {
   font-family: "NotoSerif", "Roboto", sans-serif;
   font-weight: 400;
   color: #eae9dd;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
